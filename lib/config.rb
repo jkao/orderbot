@@ -1,6 +1,6 @@
 class Robut::Plugin::Orderbot::Config
   # Time to pass by before robot starts reminding people to place their order
-  NAG_TIME = 3
+  NAG_TIME = 60
 
   # Orderbot's replies when you order something
   YUMMY_REPLIES = [
