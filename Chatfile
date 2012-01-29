@@ -1,0 +1,18 @@
+# Plugins
+require File.expand_path(File.dirname(__FILE__) + "/lib/orderbot")
+Robut::Plugin.plugins << Robut::Plugin::Orderbot
+
+require 'robut/storage/hash_store'
+
+Robut::Connection.configure do |config|
+  config.jid = ''
+  config.password = 'orderbot'
+  config.nick = 'Order Bot'
+  config.room = ''
+
+  # Some plugins for storage
+  config.store = Robut::Storage::HashStore
+
+  # Logger for debugging
+  #config.logger = Logger.new(STDOUT)
+end
